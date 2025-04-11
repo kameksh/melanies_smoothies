@@ -50,7 +50,7 @@ if ingredients_list:
 
         # If it's a dict (single record), wrap it in a list
         if isinstance(nutrition_data, dict):
-        nutrition_data = [nutrition_data]
+            nutrition_data = [nutrition_data]
 
         sf_df = pd.DataFrame(nutrition_data)
 
