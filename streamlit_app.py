@@ -1,7 +1,11 @@
 # Import python packages
 import streamlit as st
 import requests
+import pandas as pd
+
 from snowflake.snowpark.functions import col
+
+
 
 # Write directly to the app
 st.title(":cup_with_straw: Customize your Smoothi :cup_with_straw:")
