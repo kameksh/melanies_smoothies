@@ -46,8 +46,14 @@ if ingredients_list:
         
         st.subheader(fruit_chosen + 'nutrition information')
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + search_on )
-        nutrition_data = smoothiefroot_response.json()
+       nutrition_data = smoothiefroot_response.json()
+
+        # If it's a dict (single record), wrap it in a list
+        if isinstance(nutrition_data, dict):
+        nutrition_data = [nutrition_data]
+
         sf_df = pd.DataFrame(nutrition_data)
+
         st.dataframe(data=sf_df, use_container_width=True)
 
     # Optional debug print
