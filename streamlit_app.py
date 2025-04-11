@@ -43,7 +43,7 @@ if ingredients_list:
 
 
     # Optional debug print
-    #st.write(my_insert_stmt)
+    st.write(my_insert_stmt)
     #st.stop()
     time_to_insert = st.button('submit order')
 
